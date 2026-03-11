@@ -1,0 +1,34 @@
+﻿@page
+@model WebApplication2.Pages.CityManager.MultiCountriesModel
+
+<h2>Cadastrar vários países</h2>
+
+<form method="post">
+
+    @for (int i = 0; i < 5; i++)
+    {
+        <div>
+
+            <input asp-for="Countries[i].CountryName" placeholder="País" />
+            <input asp-for="Countries[i].CountryCode" placeholder="Código" />
+
+        </div>
+    }
+
+    <br>
+
+    <button type="submit">Enviar</button>
+
+</form>
+
+@if (Model.SubmittedCountries != null)
+{
+    <h3>Países enviados</h3>
+
+    <ul>
+        @foreach (var c in Model.SubmittedCountries)
+        {
+            <li>@c.CountryName (@c.CountryCode)</li>
+        }
+    </ul>
+}

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>City Manager</title>
+</head>
+
+<body>
+
+    <nav style="background:#333;padding:10px">
+        <a href="/CityManager/CreateCity" style="color:white;margin-right:15px">Criar Cidade</a>
+        <a href="/CityManager/CreateCountry" style="color:white;margin-right:15px">Criar País</a>
+        <a href="/CityManager/MultiCountries" style="color:white;margin-right:15px">Vários Países</a>
+        <a href="/CityManager/CitiesList" style="color:white;margin-right:15px">Lista Cidades</a>
+        <a href="/CityManager/SaveNote" style="color:white;margin-right:15px">Salvar Nota</a>
+        <a href="/CityManager/ViewNotes" style="color:white;margin-right:15px">Ver Notas</a>
+    </nav>
+
+    <div style="padding:20px">
+        @RenderBody()
+    </div>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

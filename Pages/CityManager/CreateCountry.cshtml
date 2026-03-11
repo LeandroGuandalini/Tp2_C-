@@ -1,0 +1,31 @@
+﻿@page
+@model WebApplication2.Pages.CityManager.CreateCountryModel
+
+<h2>Cadastrar País</h2>
+
+<form method="post">
+
+    <label>Nome do País</label>
+    <input asp-for="Input.CountryName" />
+    <span asp-validation-for="Input.CountryName"></span>
+
+    <br>
+
+    <label>Código do País</label>
+    <input asp-for="Input.CountryCode" />
+    <span asp-validation-for="Input.CountryCode"></span>
+
+    <br>
+
+    <button type="submit">Salvar</button>
+
+</form>
+
+@if (Model.Country != null)
+{
+    <p>País criado: @Model.Country.CountryName (@Model.Country.CountryCode)</p>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

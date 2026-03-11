@@ -1,0 +1,21 @@
+﻿@page
+@model WebApplication2.Pages.CityManager.SaveNoteModel
+
+<h2>Salvar Nota</h2>
+
+<form method="post">
+
+<textarea asp-for="Input.Content"></textarea>
+
+    <br>
+
+    <button type="submit">Salvar</button>
+
+</form>
+
+@if (Model.FileName != null)
+{
+    <p>Arquivo salvo:</p>
+
+    <a href="/files/@Model.FileName">Download</a>
+}

@@ -1,0 +1,24 @@
+﻿@page
+@model WebApplication2.Pages.CityManager.ViewNotesModel
+
+<h2>Arquivos</h2>
+
+<ul>
+
+    @foreach (var file in Model.Files)
+    {
+        <li>
+            <a asp-page-handler="Read" asp-route-fileName="@file">
+                @file
+            </a>
+        </li>
+    }
+
+</ul>
+
+@if (Model.Content != null)
+{
+    <h3>Conteúdo</h3>
+
+    <pre>@Model.Content</pre>
+}

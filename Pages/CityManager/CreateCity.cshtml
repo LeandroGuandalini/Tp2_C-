@@ -1,0 +1,25 @@
+﻿@page
+@model WebApplication2.Pages.CityManager.CreateCityModel
+
+<h2>Cadastrar Cidade</h2>
+
+<form method="post">
+
+    <label>Nome da Cidade</label>
+    <input asp-for="Input.CityName" />
+    <span asp-validation-for="Input.CityName"></span>
+
+    <br>
+
+    <button type="submit">Enviar</button>
+
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <p>@Model.Message</p>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
